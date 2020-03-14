@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://kit.fontawesome.com/5104cee2db.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+</head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background-color: #F7F7F7;
+}
+
+.imageMargin{
+  margin: 40px auto;
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  line-height: 70px;
+  font-size: 70px;
+}
+
+p {
+  line-height: calc(22px + 0.9vw);    /* make line height static */
+  padding-bottom : 10px;
+  padding-right: 7px;
+  font-size: calc(12px + 0.7vw);
+}
+
+h2 {
+  font-size: 35px;
+}
+
+.header {
+  color: black;
+  text-align: center;
+  padding: 10px;
+  background: #ced5dc;
+  background-size: 600%,600%;
+  background-image: linear-gradient(-60deg, #fbd3c4,#fab3ba,#dbaab8,#b1cfe9);
+  position: relative;
+  animation: change 30s ease-in-out infinite;
+}
+
+.font {
+  /* font-family: 'Noto Sans KR', sans-serif; */
+  font-family: 'Open Sans', sans-serif;
+}
+
+.image{
+  width:60%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+@keyframes transitionIn {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.fade{
+  animation: transitionIn 2s;
+}
+
+@keyframes change {
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+
+}
+
+.toptext{
+  /* animation: toptext 1s ease-in-out; */
+  margin-block-start: 28px;
+  margin-block-end: 0px;
+}
+
+.bottomtext{
+  /* animation: bottomtext 1s ease-in-out; */
+  margin-block-end: 30px;
+  margin-block-start: 0px;
+}
+
+
+
+.row {
+  display: flex;
+  padding: 38px;
+  flex-wrap: wrap;
+}
+
+
+.column {
+  flex: 50%;
+  padding: 10px;
+  display:inline-block;
+  background-color: #FFFFFF;
+}
+
+.pl{
+  padding-left: 25px;
+}
+
+@media screen and (max-width: 1000px) {
+  .column {
+    flex: 100%;
+  }
+
+  p, h1, h2{
+    padding-left: 20px;
+  }
+
+  br{
+    display: none;
+  }
+
+  h1{
+    font-size: 50px;
+    margin-block-start: 0px;
+    margin-block-end: 15px;
+  }
+
+  .image{
+    margin-bottom: 10px;
+  }
+}
+
+.topnav{
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+
+.topnav a{
+  float: left;
+  color:#000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #000;
+  color: white;
+}
+
+.topnav a.active{
+  background-color: #4CAF50;
+  color: white;
+}
+
+#scrollToTop{
+  position: fixed;
+  right: 18px;
+  bottom: 8px;
+  width: 50px;
+  height:50px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  color: #000000;
+  cursor: pointer;
+  font-size: 21px;
+  outline: none;
+  border: none;
+}
+
+#scrollToTop:active{
+  background: #d1d1d1
+}
+
+}
+</style>
+<body>
+
+<div class= "topnav">
+  <a class= "arcive" href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="music.html">Music</a>
+  <a href="gallery.html">Gallery</a>
+</div>
+
+
+<!-- Header -->
+<div class="header">
+  <img src="file:///Users/sam/Downloads/nashita-myname.png" class="centerImage imageMargin fade" alt="Sam Hollenbeck" height="261.36" width="748.08">
+</div>
+
+<div class="row drag">
+  <div class="column">
+    <img src="file:///Users/sam/Downloads/IMG_6617.jpg" class= "image left">
+  </div>
+  <div class="column">
+    <h1 class = "font toptext tt1">About</h1>
+    <h1 class = "font bottomtext">Me!</h1>
+    <p class = "font">Hi, I'm Sam Hollenbeck! I am a creator: a creator of music, worship, code, and photos.</p>
+    <p class = "font">I enjoy each for different reasons. I make music to express myself. I worship to give glory to God.
+       I code to analytically make things I find cool. I take photos to capture the beauty and joy of my subjects: my friends, family, and surroundings.</p>
+    <p class = "font" style = "padding-bottom: 0px">I would love to create for you too.</p>
+  </div>
+</div>
+
+<div class="row" style="padding-top: 0px;">
+  <div class ="column">
+    <h1 class = "font toptext pl tt2">More About</h1>
+    <h1 class = "font bottomtext pl">Me!</h1>
+    <p class = "font pl">I am a senior at Westlake High School and am 17 years old.</p>
+    <p class = "font pl">I play guitar and piano, enjoy music production, and sing as well. I am proficient in MainStage and Logic. I have published two songs.</p>
+    <p class = "font pl">I know Java and I am learning CSS/JavaScript.</p>
+  </div>
+  <div class ="column">
+    <img src="file:///Users/sam/Downloads/IMG_4406-final.png" class= "image right">
+  </div>
+</div>
+
+<div class="row expand" style="padding-top: 0px;">
+  <div class="column">
+    <img src="file:///Users/sam/Downloads/IMG_6617.jpg" class= "image left2">
+  </div>
+  <div class="column">
+    <h1 class = "font toptext tt3">About</h1>
+    <h1 class = "font bottomtext">Me!</h1>
+    <p class = "font">Hi, I'm Sam Hollenbeck! I am a creator: a creator of music, worship, code, and photos.</p>
+    <p class = "font">I enjoy each for different reasons. I make music to express myself. I worship to give glory to God.
+       I code to analytically make things I find cool. I take photos to capture the beauty and joy of my subjects: my friends, family, and surroundings.</p>
+    <p class = "font" style = "padding-bottom: 0px">I would love to create for you too.</p>
+  </div>
+</div>
+
+
+<button id= "scrollToTop"><i class="fas fa-arrow-up"></i> </button>
+
+<script>
+  const scrollToTop = document.querySelector("#scrollToTop");
+
+  scrollToTop.addEventListener("click", function() {
+    $("html, body").animate({scrollTop: 0 }, "slow");
+  });
+
+  var $image = $('.left');
+  var $imageL = $('.left2');
+  var $image2 = $('.right');
+  var $image3 = $('.imageMargin');
+  var $tt1 = $('.tt1');
+  var $tt2 = $('.tt2');
+  var $tt3 = $('.tt3');
+  var $image3 = $('.imageMargin');
+  var $window = $(window);
+  var $row = $('.expand');
+  var $row2 = $('.drag');
+
+  $window.on('scroll', function() {
+    runAnimation($image, -0.0065,'X');
+    runAnimation($imageL, -0.0065,'X');
+    runAnimation($image2, 0.008,'X');
+    runAnimation($image3, -0.065,'Y');
+    runAnimation($tt1, -0.0025,'X');
+    runAnimation($tt2, -0.0025,'X');
+    runAnimation($tt3, -0.0025,'X');
+    // runAnimation($row2, 0.025,'Y');
+  });
+
+  // $window.on('scroll', function() {
+  //   if (onScreen($row)){
+  //     var x =  38 - 0.1 * ($window.scrollTop() - startHeight($row) + $(window).height());
+  //     $row.css('padding-left', x + 'px');
+  //     $row.css('padding-right', x + 'px');
+  //   }
+  // });
+
+
+
+  function runAnimation(element, factor, direction){
+    if (onScreen(element)){
+
+      if(element.offset().top > $(window).height()){
+        var x =  factor * ($window.scrollTop() - startHeight(element) + $(window).height());
+        element.css('transform', 'translate'+ direction + '(' + x + '%)');
+      } else {
+        var x =  factor * $window.scrollTop();
+        element.css('transform', 'translate'+ direction + '(' + x + '%)');
+      }
+    }
+  }
+
+
+  function onScreen(element) {
+      var windowBottomEdge = $(window).scrollTop() + $(window).height();
+
+      if (element.length) {
+        var elementTopEdge = element.offset().top;
+      }
+      var offset = 100;
+      return elementTopEdge + offset <= windowBottomEdge;
+    }
+
+  function startHeight(element){
+    var elementTopEdge = element.offset().top;
+    var offset = 100;
+    return elementTopEdge + offset;
+  }
+
+</script>
+
+</body>
+</html>

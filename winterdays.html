@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://kit.fontawesome.com/5104cee2db.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+</head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.imageMargin{
+  margin: 40px auto;
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 140px;
+  line-height: 115px;
+  margin-block-start: 80px;
+  margin-block-end: 80px;
+}
+
+.header {
+  color: black;
+  text-align: center;
+  padding: 10px;
+  background: #ced5dc;
+  background-size: 600%,600%;
+  background-image: linear-gradient(-60deg, #fbd3c4,#fab3ba,#dbaab8,#b1cfe9);
+  position: relative;
+  animation: change 30s ease-in-out infinite;
+}
+
+@keyframes transitionIn {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.fade{
+  animation: transitionIn 2s;
+}
+
+@keyframes change {
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 750px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.topnav{
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+
+.topnav a{
+  float: left;
+  color:#000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #000;
+  color: white;
+}
+
+.topnav a.active{
+  background-color: #4CAF50;
+  color: white;
+}
+
+#scrollToTop{
+  position: fixed;
+  right: 18px;
+  bottom: 8px;
+  width: 50px;
+  height:50px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  color: #000000;
+  cursor: pointer;
+  font-size: 21px;
+  outline: none;
+  border: none;
+}
+
+#scrollToTop:active{
+  background: #d1d1d1
+}
+
+.songnav{
+  background-color: white;
+  overflow: hidden;
+  /* border-bottom: 1px solid black;
+  border-top: 1px solid black; */
+
+}
+
+.songnav a{
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 17px;
+  float: left;
+  /* border-right: solid 1px black; */
+  width: 20%
+}
+
+.songnav a:hover {
+  background-color: #000;
+  color: white;
+}
+
+.songnav a.active{
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px;
+  text-align: center;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a black background color to navbar links on hover */
+.dropdown:hover .dropbtn {
+  background-color: black;
+  color: white;
+
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  white-space: nowrap;
+  color: black;
+  width: 100%;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+h1 {
+  line-height: 70px;
+  font-size: 70px;
+}
+
+p {
+  line-height: calc(22px + 0.9vw);    /* make line height static */
+  padding-bottom : 10px;
+  padding-right: 7px;
+  font-size: calc(12px + 0.7vw);
+}
+
+h2 {
+  font-size: 35px;
+}
+
+.font {
+  /* font-family: 'Noto Sans KR', sans-serif; */
+  font-family: 'Open Sans', sans-serif;
+}
+
+.font2{
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.image{
+  width: 82%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 4px solid white;
+}
+
+@keyframes transitionIn {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.fade{
+  animation: transitionIn 2s;
+}
+
+.toptext{
+  /* animation: toptext 1s ease-in-out; */
+  margin-block-start: 20px;
+  margin-block-end: 0px;
+}
+
+.bottomtext{
+  /* animation: bottomtext 1s ease-in-out; */
+  margin-block-end: 30px;
+  margin-block-start: 0px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.column {
+  padding: 10px;
+  padding-top: 30px;
+  display:inline-block;
+  /* background-color: black; */
+  color: white;
+}
+
+.pl{
+  padding-left: 25px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid white;
+    margin: 1em 0;
+    padding: 0;
+    margin-right: 25px;
+}
+
+.songSection{
+  /* background-image: url(file:///Users/sam/Downloads/website-static.png); */
+  background-image:url(file:///Users/sam/Downloads/IMG_7293.jpg) ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  /* background-size:contain; */
+}
+
+.complete{
+    display:none;
+}
+
+@media screen and (max-width:1200px){
+
+  h1{
+    line-height: 60px;
+    font-size: 60px;
+  }
+
+  p {
+    padding-top: 10px !important;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .column {
+    flex: 100% !important;
+  }
+
+  p, h1, h2{
+    padding-left: 20px;
+  }
+
+  br{
+    display: none;
+  }
+
+  h1{
+    font-size: 50px;
+    margin-block-start: 0px;
+    margin-block-end: 1px;
+  }
+
+  .image{
+    margin-bottom: 0px;
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 585px) {
+  h1{
+    font-size: 40px;
+  }
+
+  .image{
+    width: 60%;
+  }
+}
+
+</style>
+<body onresize="windowResize()">
+
+<div class= "topnav">
+  <a class= "arcive" href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="music.html">Music</a>
+  <a href="gallery.html">Gallery</a>
+  <button onclick="secretThing()" style= "border: none; outline: none; color: white; padding: 14px; font-size: 17px;">Secret</button>
+</div>
+
+<!-- Header -->
+<div class="header">
+  <img src="file:///Users/sam/Downloads/nashita-myname.png" class="centerImage imageMargin fade" alt="Sam Hollenbeck" height="261.36" width="748.08">
+</div>
+
+<div class= "songnav">
+  <a class= "arcive" href="isly.html">I Still Love You</a>
+  <a href="winterdays.html">Winter Days</a>
+  <a href="ocome.html">O Come All Ye Faithful</a>
+  <div class="dropdown">
+    <button class="dropbtn">Future Album
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="unreleased.html">1: Unreleased Song</a>
+      <a href="#">2:</a>
+      <a href="#">3:</a>
+    </div>
+  </div>
+</div>
+
+<div id="secret" style = "display: none;">
+  <h1 style = "color: white;  line-height: 0px;"> WE LOVE MR. BERGEN.</h1>
+</div>
+
+<div class="songSection">
+  <div class="row drag">
+    <div class="column" style="flex: 35%">
+      <img src="file:///Users/sam/Desktop/winterdaystemp.png" class= "image left">
+    </div>
+    <div class="column" style="flex: 65%">
+      <h1 class = "font toptext tt1">Winter Days</h1>
+      <p class = "font" style="padding-top: 15px">This is my first <i>(and certainly not last)</i> Christmas song.
+        I wrote the song two years ago over Thanksgiving break and it became the first song I ever produced solely myself.</p>
+      <p class = "font">Although there is obviously much I would change about the production if I were to recreate it now, it does serve as a sweet benchmark
+    for my growth as a musician and a <i>Christmas lover!</i> Enjoy.</p>
+    <hr>
+      <p class = "font" style = "padding-bottom: 0px"><b>LENGTH</b>: 3:14 &nbsp;&nbsp;&nbsp;&nbsp;<b>DATE PUBLISHED</b>: DEC 10, 2017</p>
+    </div>
+  </div>
+</div>
+
+<button id= "scrollToTop"><i class="fas fa-arrow-up"></i> </button>
+
+<script>
+  const scrollToTop = document.querySelector("#scrollToTop");
+
+  scrollToTop.addEventListener("click", function() {
+    $("html, body").animate({scrollTop: 0 }, "slow");
+  });
+
+  var $image3 = $('.imageMargin');
+  var $window = $(window);
+
+  $window.on('scroll', function() {
+    var top = $window.scrollTop();
+    var z = - 0.065 * top;
+    $image3.css('transform', 'translateY(' + z + '%)');
+  });
+
+  function secretThing() {
+  var x = document.getElementById("secret");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+  // function windowResize(){
+  //   var y = document.getElementById("dropbtn");
+  //   y.style.width = 0.2 * $(window).width();
+  //   console.log("test");
+  // }
+
+</script>
+
+</body>
+</html>

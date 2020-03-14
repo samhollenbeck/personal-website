@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://kit.fontawesome.com/5104cee2db.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background-color: #F7F7F7;
+}
+
+.container {
+  margin: 38px;
+  background-color: #FFFFFF;
+}
+
+.imageMargin{
+  margin: 40px auto;
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 140px;
+  line-height: 115px;
+  margin-block-start: 80px;
+  margin-block-end: 80px;
+}
+
+.header {
+  color: black;
+  text-align: center;
+  padding: 10px;
+  background: #ced5dc;
+  background-size: 600%,600%;
+  background-image: linear-gradient(-60deg, #fbd3c4,#fab3ba,#dbaab8,#b1cfe9);
+  position: relative;
+  animation: change 30s ease-in-out infinite;
+}
+
+@keyframes change {
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes transitionIn {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.fade{
+  animation: transitionIn 2s;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 33.33%; /* IE10 */
+  flex: 33.33%;
+  max-width: 33.33%;
+  padding: 0 4px;
+  background-color: #FFFFFF;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 750px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.topnav{
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+
+.topnav a{
+  float: left;
+  color:#000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #000;
+  color: white;
+}
+
+.topnav a.active{
+  background-color: #4CAF50;
+  color: white;
+}
+
+#scrollToTop{
+  position: fixed;
+  right: 18px;
+  bottom: 8px;
+  width: 50px;
+  height:50px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  color: #000000;
+  cursor: pointer;
+  font-size: 21px;
+  outline: none;
+  border: none;
+}
+
+#scrollToTop:active{
+  background: #d1d1d1
+}
+
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class= "topnav">
+  <a class= "arcive" href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="music.html">Music</a>
+  <a href="gallery.html">Gallery</a>
+</div>
+
+
+<!-- Header -->
+<div class="header">
+  <img src="file:///Users/sam/Downloads/nashita-myname.png" class="centerImage imageMargin fade" alt="Sam Hollenbeck" height="261.36" width="748.08">
+</div>
+
+<!-- Photo Grid -->
+<div class="container">
+<div class="row">
+  <div class="column">
+    <img src="file:///Users/sam/Desktop/DSC_1514.jpeg"style="width:100%">
+    <img src="file:///Users/sam/Downloads/IMG_5194.jpg">
+    <img src="file:///Users/sam/Downloads/IMG_5339.jpg">
+    <img src="file:///Users/sam/Downloads/DSC_1601.jpg">
+    <img src="file:///Users/sam/Downloads/DSC_1632.jpg">
+    <img src="file:///Users/sam/Downloads/DSC_1551.jpg">
+  </div>
+  <div class="column">
+    <img src="file:///Users/sam/Downloads/IMG_4682.jpg" style="width:100%">
+    <img src="file:///Users/sam/Downloads/IMG_4916.jpg">
+    <img src="file:///Users/sam/Downloads/IMG_5331.jpg">
+    <img src="file:///Users/sam/Downloads/DSC_1485.jpg">
+    <img src="file:///Users/sam/Downloads/IMG_3715.jpg">
+    <img src="file:///Users/sam/Downloads/IMG_3690.jpg">
+  </div>
+  <div class="column">
+    <img src="file:///Users/sam/Downloads/DSC_1853.jpeg" style="width:100%">
+    <img src="file:///Users/sam/Downloads/DSC_1675.jpg">
+    <img src="file:///Users/sam/Downloads/DSC_1607.jpg">
+    <img src="file:///Users/sam/Downloads/DSC_1615.jpg">
+    <img src="file:///Users/sam/Downloads/IMG_8040.jpg">
+    <img src="">
+  </div>
+</div>
+</div>
+
+<button id= "scrollToTop"><i class="fas fa-arrow-up"></i> </button>
+
+<script>
+  const scrollToTop = document.querySelector("#scrollToTop");
+
+  scrollToTop.addEventListener("click", function() {
+    $("html, body").animate({scrollTop: 0 }, "slow");
+  });
+
+  scrollToTop.addEventListener("click", function() {
+    $("html, body").animate({scrollTop: 0 }, "slow");
+  });
+
+
+  var $image3 = $('.imageMargin');
+  var $window = $(window);
+
+  $window.on('scroll', function() {
+    var z = - 0.065 * $window.scrollTop();;
+    $image3.css('transform', 'translateY(' + z + '%)');
+  });
+</script>
+
+</body>
+</html>

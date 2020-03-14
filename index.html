@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://kit.fontawesome.com/5104cee2db.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.imageMargin{
+  margin: 40px auto;
+  max-width: 100%;
+  height: auto;
+  /* margin-bottom: 300px; */
+}
+
+h1 {
+  font-size: 140px;
+  line-height: 115px;
+  margin-block-start: 80px;
+  margin-block-end: 80px;
+}
+
+.header {
+  color: black;
+  text-align: center;
+  padding: 10px;
+  background: #ced5dc;
+  background-size: 600%,600%;
+  background-image: linear-gradient(-60deg, #fbd3c4,#fab3ba,#dbaab8,#b1cfe9);
+  position: relative;
+  animation: change 30s ease-in-out infinite;
+}
+
+@keyframes transitionIn {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.fade{
+  animation: transitionIn 2s;
+}
+
+@keyframes change {
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 750px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.topnav{
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+
+.topnav a{
+  float: left;
+  color:#000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #000;
+  color: white;
+}
+
+.topnav a.active{
+  background-color: #4CAF50;
+  color: white;
+}
+
+#scrollToTop{
+  position: fixed;
+  right: 18px;
+  bottom: 8px;
+  width: 50px;
+  height:50px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  color: #000000;
+  cursor: pointer;
+  font-size: 21px;
+  outline: none;
+  border: none;
+}
+
+#scrollToTop:active{
+  background: #d1d1d1
+}
+
+}
+</style>
+<body>
+
+<div class= "topnav">
+  <a class= "arcive" href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="music.html">Music</a>
+  <a href="gallery.html">Gallery</a>
+</div>
+
+<!-- Header -->
+<div class="header">
+  <img src="file:///Users/sam/Downloads/nashita-myname.png" class="centerImage imageMargin fade titleImg" alt="Sam Hollenbeck" height="261.36" width="748.08">
+</div>
+
+<button id= "scrollToTop"><i class="fas fa-arrow-up"></i> </button>
+
+<script>
+  const scrollToTop = document.querySelector("#scrollToTop");
+
+  scrollToTop.addEventListener("click", function() {
+    $("html, body").animate({scrollTop: 0 }, "slow");
+  });
+
+  var $image3 = $('.imageMargin');
+  var $window = $(window);
+  var $titleImg = $('.titleImg');
+
+  $window.on('scroll', function() {
+    var top = $window.scrollTop();
+    var z = - 0.065 * top;
+    // $image3.css('transform', 'translateY(' + z + '%)');
+  });
+
+// $image3.css('margin-top',($(window).height() - $titleImg.height())/2 + 'px');
+$image3.css('margin-bottom',($(window).height() - $titleImg.height() - 112) + 'px');
+
+</script>
+
+</body>
+</html>

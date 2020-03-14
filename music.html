@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sam Hollenbeck</title>
+  <script src="https://kit.fontawesome.com/5104cee2db.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background-color: #F7F7F7;
+}
+
+.imageMargin{
+  margin: 40px auto;
+  max-width: 100%;
+  height: auto;
+}
+
+img.image:hover{
+  filter: brightness(50%);
+ }
+
+.row {
+  display: flex;
+  padding: 38px;
+  flex-wrap: wrap;
+}
+
+h1 {
+  font-size: 140px;
+  line-height: 115px;
+  margin-block-start: 80px;
+  margin-block-end: 80px;
+}
+
+.header {
+  color: black;
+  text-align: center;
+  padding: 10px;
+  background: #ced5dc;
+  background-size: 600%,600%;
+  background-image: linear-gradient(-60deg, #fbd3c4,#fab3ba,#dbaab8,#b1cfe9);
+  position: relative;
+  animation: change 30s ease-in-out infinite;
+}
+
+h1 {
+  line-height: 70px;
+  font-size: 70px;
+}
+
+p {
+  line-height: calc(22px + 0.9vw);    /* make line height static */
+  padding-bottom : 10px;
+  padding-right: 7px;
+  font-size: calc(12px + 0.7vw);
+}
+
+h2 {
+  font-size: 35px;
+}
+
+.myname1{
+  visibility: visible;
+}
+
+.header {
+  color: black;
+  text-align: center;
+  padding: 10px;
+  background: #ced5dc;
+  background-size: 600%,600%;
+  background-image: linear-gradient(-60deg, #fbd3c4,#fab3ba,#dbaab8,#b1cfe9);
+  position: relative;
+  animation: change 30s ease-in-out infinite;
+}
+
+.font {
+  /* font-family: 'Noto Sans KR', sans-serif; */
+  font-family: 'Open Sans', sans-serif;
+}
+
+.image{
+  width:60%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* display: inline-block; */
+}
+
+@keyframes transitionIn {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.fade{
+  animation: transitionIn 2s;
+}
+
+@keyframes change {
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+
+}
+
+.toptext{
+  /* animation: toptext 1s ease-in-out; */
+  margin-block-start: 28px;
+  margin-block-end: 0px;
+}
+
+.bottomtext{
+  /* animation: bottomtext 1s ease-in-out; */
+  margin-block-end: 30px;
+  margin-block-start: 0px;
+}
+
+
+.column {
+  flex: 50%;
+  padding: 10px;
+  display:inline-block;
+  background-color: #FFFFFF;
+}
+
+.pl{
+  padding-left: 25px;
+}
+
+@media screen and (max-width: 1000px) {
+  .column {
+    flex: 100%;
+  }
+
+  p, h1, h2{
+    padding-left: 20px;
+  }
+
+  br{
+    display: none;
+  }
+
+  h1{
+    font-size: 50px;
+    margin-block-start: 0px;
+    margin-block-end: 15px;
+  }
+
+  .image{
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes change {
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 750px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.topnav{
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+
+.topnav a{
+  float: left;
+  color:#000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #000;
+  color: white;
+}
+
+.topnav a.active{
+  background-color: #4CAF50;
+  color: white;
+}
+
+#scrollToTop{
+  position: fixed;
+  right: 18px;
+  bottom: 8px;
+  width: 50px;
+  height:50px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  color: #000000;
+  cursor: pointer;
+  font-size: 21px;
+  outline: none;
+  border: none;
+}
+
+#scrollToTop:active{
+  background: #d1d1d1
+}
+
+.embed-containerparent{
+  margin-left: 38px;
+  margin-right: 38px;
+  border-style: solid;
+  border-width: 38px;
+  border-color: white;
+  border-top-width: 0px;
+}
+
+.embed-container {
+    position: relative;
+    padding-bottom: 80px;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+    .embed-container iframe,
+    .embed-container object,
+    .embed-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+}
+</style>
+<body>
+
+<div class= "topnav">
+  <a class= "arcive" href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="music.html">Music</a>
+  <a href="gallery.html">Gallery</a>
+</div>
+
+<!-- Header -->
+<div class="header">
+  <img src="file:///Users/sam/Downloads/nashita-myname.png" class="centerImage imageMargin fade" id = "myname1" alt="Sam Hollenbeck" height="261.36" width="748.08">
+  <!-- <img src="file:///Users/sam/Downloads/my-name.png" class="centerImage, imageMargin" id = "myname2" alt="Sam Hollenbeck" height="261.36" width="748.08"> -->
+</div>
+
+<!-- <p>Will have spotify embeded playback and under will have a blurb about each song and a drop down section with the lyrics of the song. </p> -->
+
+<div class="row expand" style="padding-bottom: 0px;">
+  <div class="column">
+      <a href="unreleased.html"><img src="file:///Users/sam/Documents/albumart-ocayf.jpg" class= "image left"></a>
+  </div>
+  <div class="column">
+    <h1 class = "font toptext tt3 pl">O Come All</h1>
+    <h1 class = "font bottomtext pl">Ye Faithful</h1>
+    <p class = "font pl">Recording of worship from my church.</p>
+    <p class = "font pl" style = "padding-bottom: 0px">...</p>
+  </div>
+</div>
+
+<div class="row expand" style="padding-bottom: 0px;">
+  <div class="column">
+      <a href="unreleased.html"><img src="file:///Users/sam/Desktop/IMG_7168-2.jpeg" class= "image left"></a>
+  </div>
+  <div class="column">
+    <h1 class = "font toptext tt3 pl">Unreleased</h1>
+    <h1 class = "font bottomtext pl">Song</h1>
+    <p class = "font pl">This is a jazzy song that isn't out yet.</p>
+    <p class = "font pl" style = "padding-bottom: 0px">...</p>
+  </div>
+</div>
+
+<div class="row expand" style="padding-bottom: 0px;">
+    <div class="column">
+        <a href="winterdays.html"><img src="file:///Users/sam/Desktop/winterdaystemp.png" class= "image left"></a>
+    </div>
+    <div class="column">
+      <h1 class = "font toptext tt3 pl">Winter</h1>
+      <h1 class = "font bottomtext pl">Days</h1>
+      <p class = "font pl">This is my first Christmas song!</p>
+      <p class = "font pl" style = "padding-bottom: 0px">...</p>
+    </div>
+  </div>
+  <div class='embed-containerparent'>
+    <div class='embed-container'>
+      <iframe src="https://open.spotify.com/embed/track/04CXzxVAevRug7INYVbbgG" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+  </div>
+
+  <div class="row expand" style="padding-bottom: 0px;">
+    <div class="column">
+      <a href="isly.html"><img src="file:///Users/sam/Desktop/istillloveyoutemp.png" class= "image left"></a>
+    </div>
+    <div class="column">
+      <h1 class = "font toptext tt3 pl">I Still Love</h1>
+      <h1 class = "font bottomtext pl">You</h1>
+      <p class = "font pl">I wrote this song about my brother six years ago.</p>
+      <p class = "font pl" style = "padding-bottom: 0px">...</p>
+    </div>
+  </div>
+  <div class='embed-containerparent'>
+    <div class='embed-container'>
+      <iframe src="https://open.spotify.com/embed/track/5lhEOWLSBR2iHlg2GEQMfD" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+  </div>
+
+  <!-- <div class='embed-container'>
+    <iframe src="https://open.spotify.com/embed/track/04CXzxVAevRug7INYVbbgG" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  </div> -->
+
+<button id= "scrollToTop"><i class="fas fa-arrow-up"></i> </button>
+
+<script>
+  const scrollToTop = document.querySelector("#scrollToTop");
+
+  scrollToTop.addEventListener("click", function() {
+    $("html, body").animate({scrollTop: 0 }, "slow");
+  });
+
+  var $image = $('.left');
+  var $image2 = $('.right');
+  var $image3 = $('.imageMargin');
+  var $tt1 = $('.tt1');
+  var $tt2 = $('.tt2');
+  var $tt3 = $('.tt3');
+  var $image3 = $('.imageMargin');
+  var $window = $(window);
+  var $row = $('.expand');
+  var $row2 = $('.drag');
+
+  $window.on('scroll', function() {
+    // runAnimation($image, -0.0065,'X');
+    // runAnimation($image2, 0.008,'X');
+    runAnimation($image3, -0.065,'Y');
+    runAnimation($tt1, -0.0025,'X');
+    runAnimation($tt2, -0.0025,'X');
+    runAnimation($tt3, -0.0025,'X');
+    // runAnimation($row2, 0.025,'Y');
+  });
+
+  // $window.on('scroll', function() {
+  //   if (onScreen($row)){
+  //     var x =  38 - 0.1 * ($window.scrollTop() - startHeight($row) + $(window).height());
+  //     $row.css('padding-left', x + 'px');
+  //     $row.css('padding-right', x + 'px');
+  //   }
+  // });
+
+  function runAnimation(element, factor, direction){
+    if (onScreen(element)){
+
+      if(element.offset().top > $(window).height()){
+        var x =  factor * ($window.scrollTop() - startHeight(element) + $(window).height());
+        element.css('transform', 'translate'+ direction + '(' + x + '%)');
+      } else {
+        var x =  factor * $window.scrollTop();
+        element.css('transform', 'translate'+ direction + '(' + x + '%)');
+      }
+    }
+  }
+
+
+  function onScreen(element) {
+        // window bottom edge
+        var windowBottomEdge = $(window).scrollTop() + $(window).height();
+
+        // element top edge
+        if (element.length) {
+          var elementTopEdge = element.offset().top;
+        }
+        var offset = 100;
+
+        // if element is between window's top and bottom edges
+        return elementTopEdge + offset <= windowBottomEdge;
+      }
+
+  function startHeight(element){
+    var elementTopEdge = element.offset().top;
+    var offset = 100;
+    return elementTopEdge + offset;
+  }
+
+//   window.addEventListener('load', function () {
+//     setTimeout(setVisibility('myname1',"hidden"), 10000);
+//     //
+//     // setTimeout(setVisibility('myname2',"visible"), 100);
+//     // setTimeout(setVisibility('myname2',"hidden"), 500);
+//     //
+//     // setTimeout(setVisibility('myname1',"visible"), 100);
+//     // setTimeout(setVisibility('myname1',"hidden"), 500);
+//
+//   })
+//
+// function setVisibility(element,visibility){
+//   document.getElementById(element).style.visibility = visibility;
+//   console.log(visibility);
+// }
+
+</script>
+
+</body>
+</html>
